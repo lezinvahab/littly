@@ -1,0 +1,3 @@
+# eval/results is generated output from evaluation runs.
+# Never commit evaluation answers; re-run with `npm run eval` instead.
+results/

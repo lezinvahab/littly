@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 810" role="img" aria-labelledby="littlyTitle littlyDesc">
+  <title id="littlyTitle">Littly logo</title>
+  <desc id="littlyDesc">A friendly mint green baby pacifier above the rounded wordmark Littly with the tagline For the Littles.</desc>
+
+  <!-- Decorative accent marks -->
+  <g>
+    <rect x="483" y="60" width="34" height="72" rx="17" fill="#F2C14E" transform="rotate(10 500 96)"/>
+    <rect x="537" y="62" width="37" height="98" rx="18" fill="#4C9A6D" transform="rotate(18 555 111)"/>
+    <rect x="592" y="100" width="34" height="72" rx="17" fill="#A8E0C0" transform="rotate(30 609 136)"/>
+  </g>
+
+  <!-- Pacifier shield -->
+  <path d="M160,230 C160,160 235,118 315,133 C335,137 405,137 425,133 C505,118 580,160 580,230 C580,302 505,352 370,352 C235,352 160,302 160,230 Z" fill="#8ED7B0"/>
+  <circle cx="240" cy="238" r="21" fill="#FFFFFF"/>
+  <circle cx="500" cy="238" r="21" fill="#FFFFFF"/>
+
+  <!-- Pacifier ring handle -->
+  <circle cx="370" cy="408" r="86" fill="none" stroke="#134E36" stroke-width="34"/>
+
+  <!-- Pacifier nipple -->
+  <rect x="296" y="256" width="148" height="124" rx="62" fill="#134E36"/>
+
+  <!-- Wordmark: Litt in deep green -->
+  <g fill="none" stroke="#134E36" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M95,575 L95,697 L178,697"/>
+    <path d="M250,588 L250,700"/>
+    <path d="M322,572 L322,700 M287,620 L362,620"/>
+    <path d="M417,572 L417,700 M382,620 L462,620"/>
+    <path d="M507,552 L507,700"/>
+  </g>
+  <circle cx="250" cy="532" r="25" fill="#134E36"/>
+
+  <!-- Wordmark: ly in soft mint green -->
+  <g fill="none" stroke="#8ED7B0" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M557,588 L592,682"/>
+    <path d="M657,588 C648,648 636,688 588,712"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="373" y="775" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="27" letter-spacing="7" fill="#64786C">For the Littles.</text>
+</svg>

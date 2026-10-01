@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-brand: var(--font-brand), ui-rounded, system-ui, sans-serif;
+
+  --color-porcelain: #f6f3ea;
+  --color-parchment: #ebe3d0;
+  --color-mist: #e7efe9;
+  --color-mint: #7bc9a4;
+  --color-littly-deep: #1f4d46;
+
+  --color-pine-100: #d7e6dc;
+  --color-pine-800: #0f4d3a;
+  --color-pine-900: #0a3a2d;
+  --color-pine-950: #072a21;
+
+  --color-brass-400: #c8ab60;
+  --color-brass-500: #b08d3e;
+  --color-brass-600: #8f722f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(176, 141, 62, 0.28);
+  }
+
+  :focus-visible {
+    outline: 2px solid #0f4d3a;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-bar {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+@layer utilities {
+  .animate-rise-in {
+    animation: rise-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-splash-bar {
+    animation: splash-bar 1.1s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

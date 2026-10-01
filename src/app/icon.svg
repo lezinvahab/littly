@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 30 560 520" role="img" aria-labelledby="littlyIconTitle littlyIconDesc">
+  <title id="littlyIconTitle">Littly pacifier icon</title>
+  <desc id="littlyIconDesc">A friendly mint green baby pacifier with a deep green center and ring.</desc>
+
+  <!-- Decorative accent marks -->
+  <g>
+    <rect x="483" y="60" width="34" height="72" rx="17" fill="#F2C14E" transform="rotate(10 500 96)"/>
+    <rect x="537" y="62" width="37" height="98" rx="18" fill="#4C9A6D" transform="rotate(18 555 111)"/>
+    <rect x="592" y="100" width="34" height="72" rx="17" fill="#A8E0C0" transform="rotate(30 609 136)"/>
+  </g>
+
+  <!-- Pacifier shield -->
+  <path d="M160,230 C160,160 235,118 315,133 C335,137 405,137 425,133 C505,118 580,160 580,230 C580,302 505,352 370,352 C235,352 160,302 160,230 Z" fill="#8ED7B0"/>
+  <circle cx="240" cy="238" r="21" fill="#FFFFFF"/>
+  <circle cx="500" cy="238" r="21" fill="#FFFFFF"/>
+
+  <!-- Pacifier ring handle -->
+  <circle cx="370" cy="408" r="86" fill="none" stroke="#134E36" stroke-width="34"/>
+
+  <!-- Pacifier nipple -->
+  <rect x="296" y="256" width="148" height="124" rx="62" fill="#134E36"/>
+</svg>
