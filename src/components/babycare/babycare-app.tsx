@@ -445,48 +445,51 @@ export function BabyCareApp() {
           onScroll={handleScroll}
           className="min-h-0 flex-1 overflow-y-auto"
         >
-          <div className="mx-auto w-full max-w-3xl px-4 pt-6 pb-6 sm:px-6">
+          <div className="mx-auto w-full max-w-3xl px-4 pt-4 pb-6 sm:px-6 sm:pt-6">
             {!hasMessages && !isLoading && (
               <section
                 aria-label="Welcome"
-                className="flex min-h-[50vh] flex-col items-center justify-center text-center"
+                className="flex min-h-[32vh] flex-col items-center justify-center text-center sm:min-h-[50vh]"
               >
                 <img
                   src="/logo/littly-icon.svg"
                   alt="Littly"
                   width={86}
                   height={80}
-                  className="h-20 w-auto"
+                  className="h-14 w-auto sm:h-20"
                   draggable={false}
                 />
-                <div className="mt-5 flex items-center gap-3" aria-hidden="true">
-                  <span className="h-px w-12 bg-brass-600/50" />
+                <div className="mt-4 flex items-center gap-3 sm:mt-5" aria-hidden="true">
+                  <span className="h-px w-8 bg-brass-600/50 sm:w-12" />
                   <ShieldCheck
                     className="size-4 text-brass-600"
                     aria-hidden="true"
                   />
-                  <span className="h-px w-12 bg-brass-600/50" />
+                  <span className="h-px w-8 bg-brass-600/50 sm:w-12" />
                 </div>
-                <p className="mt-4 font-brand text-[12px] font-semibold tracking-[0.24em] text-pine-800 uppercase">
+                <p className="mt-3 font-brand text-[12px] font-semibold tracking-[0.24em] text-pine-800 uppercase sm:mt-4">
                   For the Littles
                 </p>
-                <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-balance text-pine-950 sm:text-[3.4rem] sm:leading-[1.05]">
+                <h1 className="mt-3 font-display text-[28px] leading-tight font-medium tracking-tight text-balance text-pine-950 sm:mt-4 sm:text-[3.4rem] sm:leading-[1.05]">
                   Questions about your <em>little one?</em>
                 </h1>
-                <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-pretty text-stone-600">
+                <p className="mx-auto mt-4 hidden max-w-xl text-[15px] leading-relaxed text-pretty text-stone-600 sm:block">
                   Thoughtful, age-aware guidance on sleep, feeding,
                   development, crying, and baby safety — whenever you need
                   it.
                 </p>
-                <ul className="mt-7 grid w-full max-w-xl gap-2 text-left sm:grid-cols-2">
-                  {SUGGESTED_QUESTIONS.map((suggestion) => (
-                    <li key={suggestion}>
+                <ul className="mt-5 grid w-full max-w-xl gap-2 text-left sm:mt-7 sm:grid-cols-2">
+                  {SUGGESTED_QUESTIONS.map((suggestion, index) => (
+                    <li
+                      key={suggestion}
+                      className={index === 3 ? "hidden sm:block" : undefined}
+                    >
                       <button
                         type="button"
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className="flex h-full w-full items-start gap-3 rounded-2xl border border-stone-200/80 bg-white px-4 py-3.5 text-left text-sm leading-snug text-stone-700 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 hover:border-brass-600/40 hover:text-pine-950 hover:shadow-[0_10px_24px_rgba(10,58,45,0.10)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pine-800"
+                        className="flex h-full w-full items-start gap-2.5 rounded-xl border border-stone-200/80 bg-white px-3.5 py-2.5 text-left text-sm leading-snug text-stone-700 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 hover:border-brass-600/40 hover:text-pine-950 hover:shadow-[0_10px_24px_rgba(10,58,45,0.10)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pine-800 sm:gap-3 sm:rounded-2xl sm:px-4 sm:py-3.5"
                       >
-                        <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-mist text-pine-900">
+                        <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-mist text-pine-900 sm:size-8">
                           <MessageCircleHeart
                             className="size-4"
                             aria-hidden="true"
