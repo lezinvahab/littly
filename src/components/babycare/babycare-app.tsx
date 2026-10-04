@@ -601,13 +601,13 @@ export function BabyCareApp() {
               <ShieldCheck className="size-3.5 shrink-0" aria-hidden="true" />
               {SAFETY_NOTICE}
             </p>
-            <p className="pb-1 text-center text-[11px] text-stone-400">
+            <p className="pb-1 text-center text-[10px] text-stone-300 sm:text-[11px] sm:text-stone-400">
               Made by{" "}
               <a
                 href="https://lezins-portfolio.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-stone-500 underline decoration-stone-300 underline-offset-2 transition hover:text-pine-800 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-pine-800"
+                className="text-stone-400 transition hover:text-pine-800 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-pine-800 sm:font-medium sm:text-stone-500 sm:underline sm:decoration-stone-300 sm:underline-offset-2"
               >
                 lezinvahab
               </a>
