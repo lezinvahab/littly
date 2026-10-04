@@ -602,7 +602,7 @@ export function BabyCareApp() {
               {SAFETY_NOTICE}
             </p>
             <p className="pb-1 text-center text-[10px] text-stone-300 sm:text-[11px] sm:text-stone-400">
-              Made by{" "}
+              © 2026 Lezin S. All rights reserved. · Made by{" "}
               <a
                 href="https://lezins-portfolio.vercel.app/"
                 target="_blank"
