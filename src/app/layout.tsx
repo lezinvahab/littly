@@ -24,6 +24,9 @@ const brandRounded = Baloo_2({
 
 export const metadata: Metadata = {
   applicationName: "Littly",
+  verification: {
+    google: "USl8EGsLYj4XHHcnA9t_DezXThHJ20nnG8fox4a5QGA",
+  },
   title: {
     default: "Littly — For the Littles.",
     template: "%s · Littly",
