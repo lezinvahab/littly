@@ -23,16 +23,46 @@ const brandRounded = Baloo_2({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://littlyai.vercel.app"),
   applicationName: "Littly",
   verification: {
     google: "USl8EGsLYj4XHHcnA9t_DezXThHJ20nnG8fox4a5QGA",
   },
   title: {
-    default: "Littly — For the Littles.",
+    default: "Littly AI — Baby Care Assistant | For the Littles",
     template: "%s · Littly",
   },
   description:
-    "Littly offers calm, parent-friendly guidance on sleep, feeding, development, crying, and baby safety. For the Littles.",
+    "Meet Littly AI, a parent-friendly baby care assistant offering guidance on infant sleep, feeding, development, crying, and everyday baby safety.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Littly",
+    title: "Littly AI — Baby Care Assistant | For the Littles",
+    description:
+      "Meet Littly AI, a parent-friendly baby care assistant offering guidance on infant sleep, feeding, development, crying, and everyday baby safety.",
+    images: [
+      {
+        url: "/logo/littly-reference.png",
+        width: 1254,
+        height: 1254,
+        alt: "Littly — For the Littles",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Littly AI — Baby Care Assistant | For the Littles",
+    description:
+      "Meet Littly AI, a parent-friendly baby care assistant offering guidance on infant sleep, feeding, development, crying, and everyday baby safety.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -50,6 +80,19 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Littly",
+  alternateName: "Littly AI",
+  applicationCategory: "LifestyleApplication",
+  operatingSystem: "Web",
+  inLanguage: "en",
+  url: "https://littlyai.vercel.app/",
+  description:
+    "Meet Littly AI, a parent-friendly baby care assistant offering guidance on infant sleep, feeding, development, crying, and everyday baby safety.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,6 +101,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable} ${brandRounded.variable} h-full`}>
       <body className="min-h-full bg-porcelain font-sans text-stone-900 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
